@@ -1,0 +1,78 @@
+{
+  "name": "崔亦哲",
+  "contact": "17794230123（微信同号）| 1996.11 | 现居深圳 | 兰州大学 · 计算机科学与技术（本科）",
+  "objective": "AI Agent 工程师 / 大模型应用工程师（代码智能方向）| 7 年研发：Java 后端 → NLP/LLM 算法工程化 → AI Agent 工具链，近两年核心参与多语言代码图谱引擎、MCP 服务与 RAG 故障诊断平台建设 | 可到岗：一个月内",
+  "sections": [
+    {
+      "title": "教育背景",
+      "entries": [
+        {
+          "title": "兰州大学 — 计算机科学与技术 · 本科",
+          "meta": "2019 年毕业"
+        }
+      ]
+    },
+    {
+      "title": "核心项目",
+      "entries": [
+        {
+          "title": "多语言代码图谱引擎 + MCP 服务（AI Agent 基础设施）",
+          "meta": "2025 – 至今",
+          "subtitle": "华为（OD 岗） · 核心成员",
+          "bullets": [
+            "设计基于 Clang AST（C/C++）、AST + Jedi（Python）、LSP（Java）的多语言静态解析引擎，输出面向 AI Agent 的代码图谱；用 Go 基于 tree-sitter + LSP 重写，支持 C/C++/Java/Python 四语言，语义与 Python 基线逐字段对齐（验收 harness 73/73 通过）",
+            "设计 LangSpec 框架（语言无关遍历器 + 语言特化规格）、Graph Buffer（跨文件节点合并、确定性去重）、CBM 置信链 / MRO 方法解析，解决多语言解析语义一致性问题",
+            "设计 MCP（Model Context Protocol）服务，提供 search_code / get_file_dependencies / search_error_log / list_external_calls 等 9 个标准化查询工具，使大模型工具调用具备按代码事实回答的落地能力",
+            "以 AI Agent 驱动研发流程：1 个月从 initial commit 交付生产级四语言引擎（134 commits / 132 issues）；建成 5 个代码仓 CI/CD（双平台构建矩阵、pre-push 门禁、PyInstaller 打包）；架构深层模块化（port 抽象、server 瘦身至约 100 行），101+ 单元测试、624+ 测试用例、coverage 地板 82%",
+            "配套数据管道：从 0 到 1 建设 CMC 数据同步平台（全链路异步化、SQLite → PostgreSQL 迁移 + Alembic、ETL 增量同步），同步耗时 -54.5%、回拉接口 -45.9%"
+          ]
+        },
+        {
+          "title": "FaultPro：RAG + eBPF 故障诊断平台",
+          "meta": "2025 – 至今",
+          "subtitle": "华为（OD 岗） · 核心成员",
+          "bullets": [
+            "设计 RAG 故障知识库：数据清洗 → 语义向量检索 → 精排全链路",
+            "开发 eBPF 慢 IO 定界工具：无侵入式 IO 路径追踪，VFS → IO 调度器 → NFS 网络时延分段统计，采集开销 < 2%",
+            "收敛 RTOS / 数据库 / 内核多格式日志为统一解析适配器体系（ASan 调用栈提取、GCC 后缀函数名、pc:/lr: 栈帧识别）",
+            "构建基于 opencode 的批量诊断 Agent 工作流（超时续跑、部分输出复用），集成国产 AI 算力诊断工具，实现日志诊断 → 故障链建立 → 知识库沉淀闭环"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "工作经历",
+      "entries": [
+        {
+          "title": "华为（OD 岗）",
+          "meta": "2021.07 – 至今",
+          "subtitle": "研发工程师（代码智能与 AI Agent 工具链 / NLP·LLM 算法工程化 / Java 后端）",
+          "bullets": [
+            "2023 – 2024 NLP/LLM 算法工程化（多厂商配置翻译系统）：长文本配置模板匹配（BERT，top5 准确率 95%）；命令参数匹配（Snorkel 弱监督 + BERT，top10 75%，缓存 + numba 加速后耗时 -95%）；LLM 规则优选重排（top3 提升至 93%）；基于通义千问的配置生成（ICL 优化 + DPO 微调），完成垂直领域配置生成落地",
+            "大模型调研：设计评测场景，评估 ChatGLM / 盘古在垂直业务领域的辅助能力，产出团队 LLM 落地建议；搭建 GPU 训练环境支撑 BERT 微调、UIE 实体抽取；交付配置翻译后台（规则推荐 / 规则库 / 源配置翻译）",
+            "2021.07 – 2022.12 Java 后端：认知闭环微服务研发，支撑功能测试 → 开发 → 上线全流程，重构后模块接口简化 50%；数字地图平台后台开发（Docker 部署），支撑运营商联创样机验收"
+          ]
+        },
+        {
+          "title": "浪潮集团",
+          "meta": "2019.07 – 2021.07",
+          "subtitle": "Java 后端开发",
+          "bullets": [
+            "医疗健康体检系统后端开发，负责体检流程、预约、报告查询等模块的设计与上线"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "技能",
+      "type": "skills",
+      "items": [
+        {"category": "AI / LLM", "content": "MCP 服务设计（精）· RAG（向量检索 + 精排，精）· LLM 微调：DPO / ICL / 重排（精）· BERT / Snorkel 弱监督（熟）· 大模型评测（熟）"},
+        {"category": "Agent 工程", "content": "Claude Code / Codex / opencode 驱动研发（精）· Agent 批量任务工作流：超时续跑 / 结果复用（精）"},
+        {"category": "语言", "content": "Python（精）· Go（精）· Java（熟）· C / C++（解析场景）"},
+        {"category": "代码分析", "content": "Clang AST · tree-sitter · LSP · Jedi · CBM 置信链 · MRO（精）"},
+        {"category": "工程", "content": "eBPF · PostgreSQL（Alembic / 分区表）· ETL · CI/CD 双平台 · PyInstaller · Docker（熟）"}
+      ]
+    }
+  ]
+}
